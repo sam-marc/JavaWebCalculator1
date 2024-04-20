@@ -1,2 +1,8 @@
 ---
-# tasks file for git
+- name: Install Git
+  become: true
+  tasks:
+    - name: Install Git
+      yum:
+        name: git
+        state: present
